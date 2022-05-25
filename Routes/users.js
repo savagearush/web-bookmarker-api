@@ -5,10 +5,6 @@ const auth = require("../middleware/auth.js");
 const { pick } = require("lodash");
 const { User, validateUser } = require("../modals/Users");
 
-router.post("/", auth, (req, res) => {
-  console.log(req.body);
-});
-
 router.post("/register", async (req, res) => {
   const { error } = validateUser(req.body);
   if (error)

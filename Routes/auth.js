@@ -8,13 +8,13 @@ const Joi = require("joi");
 
 router.post("/", async (req, res) => {
   const { error } = validate(req.body);
+
   if (error)
     return res
       .status(400)
       .json({ type: "danger", message: error.details[0].message });
 
   let user = await User.findOne({ email: req.body.email });
-
   if (!user)
     return res
       .status(400)

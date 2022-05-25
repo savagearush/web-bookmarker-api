@@ -1,7 +1,9 @@
 const { connect } = require("mongoose");
+const { config } = require("dotenv");
+config({ path: "config/config.env" });
 
 module.exports = () => {
-  connect(process.env.MONGO_URI)
+  connect(process.env.DEV_MONGO_URI)
     .then(() => {
       console.log("Database connected Successfully.");
     })

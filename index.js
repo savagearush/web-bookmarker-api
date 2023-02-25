@@ -14,8 +14,12 @@ if (!process.env.JWT_PRIVATE_KEY) {
   console.error("FATAL EnsvRORR : JWT_PRIVATE_KEY is not defined.");
   process.exit(1);
 }
-
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use(express.static(join(__dirname, "\\public")));
 app.use(express.urlencoded({ extended: false }));
 

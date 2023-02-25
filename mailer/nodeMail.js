@@ -8,7 +8,7 @@ async function messageNow(email, token) {
     secure: true,
     auth: {
       user: "arush3339@gmail.com",
-      pass: "usvqtetzirxvddfx",
+      pass: "sbxbdanltjzzpbpb",
     },
   });
 

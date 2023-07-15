@@ -28,7 +28,7 @@ const corsOptions = {
 
 // Middleware
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Credentials", true);
+  req.header("Access-Control-Allow-Credentials", true);
   next();
 });
 

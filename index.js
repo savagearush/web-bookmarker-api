@@ -15,7 +15,7 @@ if (!process.env.JWT_PRIVATE_KEY) {
   process.exit(1);
 }
 const corsOptions = {
-  origin: "*",
+  origin: "https://savage-bookmarker.netlify.app",
   credentials: true,
   optionSuccessStatus: 200,
 };

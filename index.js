@@ -14,6 +14,12 @@ if (!process.env.JWT_PRIVATE_KEY) {
   console.error("FATAL ERROR : JWT_PRIVATE_KEY is not defined.");
   process.exit(1);
 }
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 const corsOptions = {
   origin: "https://savage-bookmarker.netlify.app",
   credentials: true,

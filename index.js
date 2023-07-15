@@ -20,6 +20,12 @@ const corsOptions = {
   optionSuccessStatus: 200,
 };
 
+// Middleware
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 app.use(helmet());
 app.use(cors(corsOptions));
 app.use(express.static(join(__dirname, "\\public")));

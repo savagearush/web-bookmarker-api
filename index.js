@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-  origin: "https://savage-bookmarker.netlify.app",
+  origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };

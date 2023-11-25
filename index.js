@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://web-bookmarker.vercel.app",
   credentials: true,
   optionSuccessStatus: 200,
 };
